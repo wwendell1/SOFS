@@ -1,0 +1,1574 @@
+:root {
+  /* Cores principais */
+  --primary-purple: #8B5CF6;
+  --primary-purple-light: #A78BFA;
+  --primary-purple-lighter: #DDD6FE;
+  --primary-purple-dark: #7C3AED;
+  --primary-purple-bg: #F5F3FF;
+  --secondary-blue: #E5F0FF;
+  --dark-blue: #1A237E;
+  --accent-green: #4CAF50;
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  
+  /* Cores neutras */
+  --dark-gray: #424242;
+  
+  /* Gradientes */
+  --main-gradient: linear-gradient(135deg, var(--primary-dark-blue), var(--primary-light-blue));
+}
+
+/* Estilos globais */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.title {
+  color: var(--primary-dark-blue);
+  font-weight: 700;
+}
+
+.subtitle {
+  color: var(--primary-purple);
+}
+
+/* Hero Banner */
+#main-hero {
+    background: var(--main-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+#main-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/pattern.svg') repeat;
+    opacity: 0.1;
+}
+
+.pulse-button {
+    background-color: var(--accent-green) !important;
+    color: var(--white) !important;
+    transition: all 0.3s ease;
+}
+
+.pulse-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 80px;
+}
+
+.navbar-item img {
+    max-height: 40px;
+}
+
+.navbar-item {
+    color: #333;
+    font-weight: 500;
+}
+
+.button.is-primary {
+    background-color: var(--primary-purple);
+    border-radius: 25px;
+    padding: 0 25px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.button.is-primary:hover {
+    background-color: var(--primary-purple-dark);
+    transform: translateY(-2px);
+}
+
+/* Hero Banner Styles */
+.hero {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-purple));
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern.svg') repeat;
+    opacity: 0.1;
+}
+
+.hero-body {
+    z-index: 1;
+}
+
+.hero .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero .subtitle {
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero .title {
+        font-size: 2.5rem;
+    }
+    
+    .navbar-menu {
+        background: var(--white);
+    }
+}
+
+/* Seção de Serviços */
+.services-section {
+    background-color: #f0f7ff;
+    padding: 4rem 0;
+}
+
+.services-title {
+    color: #c7c7c7;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.services-subtitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+/* Estilos dos Botões */
+.service-button {
+    background: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.service-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-button.active {
+    background: #0066FF;
+    color: white;
+}
+
+/* Estilos dos Cards */
+.service-cards-container {
+    margin-top: 2rem;
+}
+
+.service-card {
+    display: none;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card.active {
+    display: block;
+    opacity: 1;
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: #0066FF;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.service-intro {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.service-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.service-item h4:hover {
+    color: #e4e4e4;
+}
+
+.service-item p {
+    color: #666;
+}
+
+.learn-more {
+    color: var(--primary-purple);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+}
+
+.learn-more:hover {
+    gap: 1rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .section-subtitle {
+        font-size: 2rem;
+    }
+    
+    .service-details {
+        padding: 1.5rem;
+    }
+}
+
+/* Estilos para o container de detalhes do serviço */
+.service-details-container {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-intro {
+    padding-right: 2rem;
+}
+
+.service-icon {
+    color: var(--primary-purple);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.service-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para os itens de detalhe */
+.detail-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.detail-item:hover {
+    transform: translateX(10px);
+}
+
+.arrow-icon {
+    color: var(--primary-purple);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.detail-item:hover .arrow-icon {
+    opacity: 1;
+}
+
+.detail-item p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Botão de contato */
+.contact-button {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.contact-button .button {
+    padding: 0 2rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-button .button:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .service-details-container {
+        padding: 1.5rem;
+    }
+
+    .service-intro {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .service-main-title {
+        font-size: 1.75rem;
+    }
+
+    .contact-button {
+        text-align: center;
+    }
+}
+
+/* Estilos para os cards de menu */
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.service-card.active {
+    background: var(--primary-purple);
+    color: white;
+}
+
+/* Estilos para o conteúdo */
+.service-content {
+    display: none;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.service-tab {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.service-tab.active {
+    background: #0066FF;
+    color: white;
+    border-bottom-color: #004dc4;
+}
+
+.service-content {
+    display: none;
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: #0066FF;
+    margin-bottom: 1.5rem;
+}
+
+.service-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.service-item h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.service-item .arrow {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-item:hover .arrow {
+    opacity: 1;
+}
+
+.contact-button {
+    margin-top: 2rem;
+}
+
+.contact-button button {
+    background: #E5F0FF;
+    color: #0066FF;
+    padding: 0 2rem;
+}
+
+.why-choose-section {
+    padding: 6rem 0;
+    background-color: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header .subtitle {
+    color: var(--primary-purple);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.section-header .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.video-banner {
+    background: var(--primary-purple);
+    border-radius: 12px;
+    padding: 3rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    background-image: url('assets/images/pattern-bg.svg');
+    background-size: cover;
+}
+
+.video-banner .content {
+    max-width: 50%;
+}
+
+.video-banner h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.video-banner h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-purple);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    color: var(--primary-purple);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.feature-card .highlight {
+    color: var(--primary-purple);
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .feature-card {
+        margin-bottom: 2rem;
+    }
+}
+
+.hero-banner {
+    background: var(--primary-purple);
+    padding: 6rem 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url('assets/images/pattern-dots.svg') no-repeat right center;
+    opacity: 0.1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.text-content {
+    max-width: 800px;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.banner-title .highlight {
+    color: #FFD700;
+    position: relative;
+    display: inline-block;
+}
+
+.banner-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.banner-stats {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.banner-cta .button {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: white;
+    color: var(--primary-purple);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.banner-cta .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.banner-cta .icon {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.banner-cta .button:hover .icon {
+    transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+    .banner-title {
+        font-size: 2.5rem;
+    }
+
+    .banner-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .stat-item {
+        align-items: center;
+    }
+}
+
+.why-choose-banner {
+    background: var(--primary-purple);
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.banner-content {
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.title-wrapper h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.title-wrapper .highlight {
+    color: #FFD700;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .title-wrapper h2 {
+        font-size: 2rem;
+    }
+    
+    .why-choose-banner {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.company-card {
+    background: white;
+    border-radius: 16px;
+    padding: 4rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.company-intro h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.company-intro p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-box {
+    background: var(--primary-purple-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-purple);
+}
+
+.stat-box:hover {
+    transform: translateX(5px);
+    background: var(--primary-purple-bg);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--primary-purple-bg);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    background: var(--primary-purple-bg);
+    transform: translateX(5px);
+}
+
+.highlight-item .icon {
+    color: var(--primary-purple);
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.highlight-item span:last-child {
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .company-card {
+        padding: 2rem;
+    }
+
+    .company-intro h3 {
+        font-size: 1.8rem;
+    }
+
+    .stats-container {
+        margin-top: 2rem;
+    }
+}
+
+.contact-section {
+    padding: 6rem 0;
+    background-color: var(--primary-purple);
+}
+
+.contact-card {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info {
+    padding-right: 2rem;
+}
+
+.contact-info .subtitle {
+    color: var(--primary-purple);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-info .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.contact-info .description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info .sub-description {
+    color: #888;
+    font-size: 1rem;
+}
+
+.contact-form .field {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form .label {
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .input,
+.contact-form .select select,
+.contact-form .textarea {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    height: 2.5em;
+}
+
+.contact-form .select {
+    width: 100%;
+}
+
+.contact-form .select select {
+    width: 100%;
+    padding: 0 2.5em 0 0.8rem;
+    height: 2.5em;
+    line-height: 2.5em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.contact-form .input:focus,
+.contact-form .select select:focus,
+.contact-form .textarea:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
+}
+
+/* Ajuste para garantir que os selects tenham a mesma altura dos inputs */
+.contact-form .select:not(.is-multiple):not(.is-loading)::after {
+    border-color: #888;
+    right: 1.125em;
+    z-index: 4;
+    top: 50%;
+    margin-top: -0.5em;
+}
+
+.contact-form .button {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.contact-form .button .icon {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-form .button:hover .icon {
+    transform: translateX(5px);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .contact-card {
+        padding: 2rem;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info .title {
+        font-size: 2rem;
+    }
+}
+
+/* Adicione este estilo para garantir que o texto fique centralizado verticalmente */
+.contact-form .select select option {
+    padding: 0.5em 0;
+}
+
+/* Ajuste adicional para garantir alinhamento consistente em diferentes navegadores */
+.contact-form .input,
+.contact-form .select select,
+.contact-form .textarea {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustes para elementos com fundo roxo */
+.highlight,
+.feature-card .highlight,
+.highlight-item .icon,
+.company-intro .highlight,
+.contact-form .input:focus,
+.contact-form .select select:focus,
+.contact-form .textarea:focus {
+    color: var(--primary-purple);
+}
+
+.stat-box {
+    border-left: 4px solid var(--primary-purple);
+}
+
+.contact-section {
+    background: var(--primary-purple);
+}
+
+.banner-content,
+.hero-banner {
+    background: var(--primary-purple);
+}
+
+.stat-box:hover {
+    background: var(--primary-purple-bg);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
+}
+
+.feature-card .icon {
+    color: var(--primary-purple);
+}
+
+.highlight-item:hover {
+    background: var(--primary-purple-bg);
+}
+
+.button.is-primary {
+    background-color: var(--primary-purple);
+}
+
+.button.is-primary:hover {
+    background-color: var(--primary-purple-dark);
+}
+
+/* Ajustes para elementos com fundo roxo */
+.contact-form .input:focus,
+.contact-form .select select:focus,
+.contact-form .textarea:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
+}
+
+/* Ajuste para links e elementos interativos */
+a:hover {
+    color: var(--primary-purple);
+}
+
+/* Ajuste para elementos de destaque */
+.subtitle {
+    color: var(--primary-purple);
+}
+
+/* Ajuste para backgrounds suaves */
+.stat-box,
+.highlight-item {
+    background: var(--primary-purple-bg);
+}
+
+/* Estilo para os cards de serviços */
+.service-cards {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.service-card {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: white;
+    color: #333;
+}
+
+.service-card.active {
+    background: var(--primary-purple);
+    color: white;
+}
+
+.service-card:not(.active):hover {
+    background: var(--primary-purple-bg);
+    color: var(--primary-purple);
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .service-card {
+        padding: 1rem;
+    }
+    .service-card h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Ajuste do HTML para aplicar as classes */
+
+/* Estilo para as tabs de serviço */
+.service-tab {
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    height: 100%;
+}
+
+/* Estado ativo da tab */
+.service-tab.active {
+    background: var(--primary-purple) !important; /* Força a aplicação do roxo */
+    color: white;
+}
+
+/* Hover nas tabs inativas */
+.service-tab:not(.active):hover {
+    background: var(--primary-purple-bg);
+    transform: translateY(-3px);
+}
+
+/* Estilo para os títulos das tabs */
+.service-tab h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .service-tab {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilo específico para o botão "Comece seu projeto" */
+.hero-banner .button {
+    background-color: #7C3AED; /* Roxo mais escuro */
+    color: white;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Hover do botão */
+.hero-banner .button:hover {
+    background-color: #6D28D9; /* Ainda mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* Estado ativo do botão */
+.hero-banner .button:active {
+    transform: translateY(0);
+}
+
+/* Se precisar sobrescrever outros estilos */
+.hero-banner .button.is-primary {
+    background-color: #7C3AED !important;
+}
+
+/* Estilo para os textos da seção de contato */
+.contact-section {
+    color: #333333; /* Cor base para todos os textos */
+}
+
+.contact-section h2,
+.contact-section h3,
+.contact-section p {
+    color: #333333;
+}
+
+/* Estilo específico para o título principal */
+.contact-section .title,
+.contact-section h2.title {
+    color: #1A1A1A; /* Preto mais forte para títulos */
+    font-weight: 600;
+}
+
+/* Estilo para os labels dos campos */
+.contact-section label,
+.contact-section .label {
+    color: #333333;
+    font-weight: 500;
+}
+
+/* Estilo para o texto descritivo */
+.contact-section .description {
+    color: #333333;
+}
+
+/* Estilo para o texto do checkbox de privacidade */
+.contact-section .checkbox,
+.contact-section .checkbox span {
+    color: #333333;
+}
+
+/* Estilo para os placeholders dos inputs */
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+    color: #666666;
+}
+
+/* Estilo para o texto dos selects */
+.contact-section select,
+.contact-section .select select {
+    color: #333333;
+}
+
+/* Link da política de privacidade */
+.contact-section a {
+    color: #333333;
+    text-decoration: underline;
+}
+
+/* Estilo específico para o botão Enviar do formulário */
+.contact-section .button,
+.contact-section button[type="submit"] {
+    background-color: #7C3AED !important; /* Roxo mais escuro */
+    color: white !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Hover do botão */
+.contact-section .button:hover,
+.contact-section button[type="submit"]:hover {
+    background-color: #6D28D9 !important; /* Ainda mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* Estado ativo do botão */
+.contact-section .button:active,
+.contact-section button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Estilo para o menu dropdown e hover */
+.navbar-item.has-dropdown:hover .navbar-link,
+.navbar-item.has-dropdown.is-active .navbar-link,
+.navbar-link:hover {
+    color: #7C3AED !important; /* Roxo escuro */
+    background-color: transparent !important;
+}
+
+/* Estilo para a seta do dropdown */
+.navbar-link:not(.is-arrowless)::after {
+    border-color: #7C3AED !important; /* Cor da seta */
+}
+
+/* Estilo para os links do menu */
+.navbar-item:hover,
+.navbar-link:hover {
+    color: #7C3AED !important;
+}
+
+/* Estilo para o item ativo do menu */
+.navbar-item.is-active {
+    color: #7C3AED !important;
+}
+
+/* Estilo para o dropdown */
+.navbar-dropdown a.navbar-item:hover {
+    color: #7C3AED !important;
+    background-color: #F5F3FF; /* Fundo roxo bem claro no hover */
+}
+
+
+
+
+
+
+
+
+
+.solutions-section .fas {
+    color: #8B5CF6;
+}
+
+/* Para garantir que todos os ícones na seção tenham a mesma cor */
+.solutions-section i {
+    color: #8B5CF6;
+}
+
+
+/* Se houver SVGs, você pode adicionar isto também */
+.solutions-section svg {
+    fill: #8B5CF6;
+}
+
+/* Estilos para a página de contato */
+.solutions-section .card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.solutions-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.solutions-section .icon {
+    margin-bottom: 1rem;
+    color: #070707; /* Nova cor roxa */
+}
+
+.solutions-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.solutions-section ul li {
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+}
+
+.contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-info .contact-item i {
+    margin-right: 1rem;
+    color: var(--primary-color);
+}
+
+.contact-section {
+    background-color: #f5f5f5;
+}
+
+
+
+
+/* Blog */
+
+
+/* Estilos para o Blog */
+.blog-posts .card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.blog-posts .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.blog-posts .card-image {
+    overflow: hidden;
+}
+
+.blog-posts .card-image img {
+    transition: transform 0.3s ease;
+}
+
+.blog-posts .card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.blog-posts .title {
+    color: #8B5CF6;
+}
+
+.hero.is-primary {
+    background-color: #8B5CF6;
+}
+
+.button.is-primary.is-outlined {
+    color: #8B5CF6;
+    border-color: #8B5CF6;
+}
+
+.button.is-primary.is-outlined:hover {
+    background-color: #8B5CF6;
+    color: white;
+}
+
+
+
+/* Ajuste do tamanho do logo */
+.navbar-item img.logo-img {
+    max-height: 80px; /* Ajuste este valor conforme necessário */
+    width: auto;
+}
+
+/* Para garantir que o container do logo não fique muito grande */
+.navbar-brand .navbar-item {
+    padding: 0.5rem 0.75rem;
+}
+
+
+
+
+/* responsividade*/ 
+
+/* Estilos Responsivos Globais */
+
+/* Tablets e telas menores (até 1023px) */
+@media screen and (max-width: 1023px) {
+    /* Ajustes do Navbar */
+    .navbar-menu {
+        box-shadow: none;
+    }
+
+    /* Ajustes do Hero/Banner */
+    .banner-title {
+        font-size: 2.5rem;
+    }
+
+    .banner-description {
+        font-size: 1.1rem;
+    }
+
+    /* Ajuste dos cards de serviços */
+    .service-cards .column {
+        padding: 0.5rem;
+    }
+}
+
+/* Tablets menores e celulares (até 768px) */
+@media screen and (max-width: 768px) {
+    /* Ajustes do Navbar */
+    .navbar-item img.logo-img {
+        max-height: 40px;
+    }
+
+    /* Ajustes do Hero/Banner */
+    .banner-title {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .banner-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Ajustes dos cards */
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    /* Ajustes da seção de serviços */
+    .service-tab {
+        padding: 1rem;
+    }
+
+    .service-content {
+        padding: 1.5rem;
+    }
+
+    /* Ajustes do formulário de contato */
+    .contact-form .field {
+        margin-bottom: 1rem;
+    }
+
+    .contact-section {
+        padding: 3rem 1rem;
+    }
+
+    /* Ajustes do Blog */
+    .blog-posts .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajustes gerais de padding */
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    /* Ajustes do Hero/Banner */
+    .banner-title {
+        font-size: 1.75rem;
+    }
+
+    .banner-cta .button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* Ajustes dos cards */
+    .card-content {
+        padding: 1rem;
+    }
+
+    /* Ajustes do formulário */
+    .columns.is-multiline > .column {
+        padding: 0.5rem;
+    }
+
+    /* Ajustes dos títulos */
+    .title {
+        font-size: 1.5rem !important;
+    }
+
+    .subtitle {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Ajustes específicos para o menu mobile */
+@media screen and (max-width: 1023px) {
+    .navbar-burger {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .navbar-menu.is-active {
+        display: block;
+    }
+
+    .navbar-item.has-dropdown > .navbar-link {
+        padding-right: 3rem;
+    }
+
+    .navbar-dropdown {
+        display: none;
+        padding: 0;
+        border-top: none;
+    }
+
+    .navbar-item.has-dropdown.is-active .navbar-dropdown {
+        display: block;
+    }
+
+    .navbar-dropdown a.navbar-item {
+        padding-left: 1.5rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media screen and (max-width: 320px) {
+    .banner-title {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .card-content {
+        padding: 0.75rem;
+    }
+}

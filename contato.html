@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFS - Entre em Contato</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Seção de Soluções -->
+    <br>
+    <br>
+    <section class="solutions-section section">
+        <div class="container">
+            <h1 class="title has-text-centered">Nossas Soluções Digitais</h1>
+            <div class="columns is-multiline mt-6">
+                <!-- Sites e Landing Pages -->
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="icon has-text-primary">
+                                <i class="fas fa-globe fa-2x"></i>
+                            </div>
+                            <h3 class="title is-4">Sites e Landing Pages</h3>
+                            <ul class="mt-4">
+                                <li>✓ Sites institucionais</li>
+                                <li>✓ Landing pages otimizadas</li>
+                                <li>✓ E-commerce</li>
+                                <li>✓ Blogs corporativos</li>
+                                <li>✓ Design responsivo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistemas Jurídicos -->
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="icon has-text-primary">
+                                <i class="fas fa-balance-scale fa-2x"></i>
+                            </div>
+                            <h3 class="title is-4">Sistemas Jurídicos</h3>
+                            <ul class="mt-4">
+                                <li>✓ Gestão de processos</li>
+                                <li>✓ Controle de prazos</li>
+                                <li>✓ Automação de documentos</li>
+                                <li>✓ Integração com tribunais</li>
+                                <li>✓ Relatórios personalizados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistemas RH -->
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="icon has-text-primary">
+                                <i class="fas fa-users fa-2x"></i>
+                            </div>
+                            <h3 class="title is-4">Sistemas de RH</h3>
+                            <ul class="mt-4">
+                                <li>✓ Gestão de funcionários</li>
+                                <li>✓ Folha de pagamento</li>
+                                <li>✓ Recrutamento e seleção</li>
+                                <li>✓ Avaliação de desempenho</li>
+                                <li>✓ Controle de ponto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-5">
+                    <h4 class="subtitle">VAMOS CONVERSAR?</h4>
+                    <h2 class="title">Transforme sua ideia em realidade</h2>
+                    <p class="description mb-4">
+                        Estamos prontos para ajudar você a desenvolver a solução ideal para o seu negócio. 
+                        Nossa equipe especializada vai entender suas necessidades e propor a melhor abordagem.
+                    </p>
+                    <div class="contact-info mt-6">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>wendellc.dev@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(21) 98094-6759</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rio de Janeiro, RJ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-7">
+                    <!-- Formulário de Contato (mesmo do index.html) -->
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/wendellc.dev@gmail.com" method="POST">
+                        <div class="columns is-multiline">
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Nome Completo*</label>
+                                    <div class="control">
+                                        <input class="input" type="text" name="nome" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Cargo*</label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select name="cargo" required>
+                                                <option value="">Selecione</option>
+                                                <option value="CEO">CEO</option>
+                                                <option value="Gerente">Gerente</option>
+                                                <option value="Analista">Analista</option>
+                                                <option value="Outro">Outro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Nome da empresa*</label>
+                                    <div class="control">
+                                        <input class="input" type="text" name="empresa" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Mercado*</label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select name="mercado" required>
+                                                <option value="">Selecione</option>
+                                                <option value="Tecnologia">Tecnologia</option>
+                                                <option value="Finanças">Finanças</option>
+                                                <option value="Saúde">Saúde</option>
+                                                <option value="Educação">Educação</option>
+                                                <option value="Outro">Outro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">E-mail*</label>
+                                    <div class="control">
+                                        <input class="input" type="email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Telefone*</label>
+                                    <div class="control">
+                                        <input class="input" type="tel" name="telefone" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <div class="field">
+                                    <label class="label">Fale sobre seu projeto ou desafio</label>
+                                    <div class="control">
+                                        <textarea class="textarea" name="mensagem" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <div class="field">
+                                    <label class="checkbox">
+                                        <input type="checkbox" required>
+                                        Eu concordo com a <a href="#">Política de Privacidade</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button class="button is-primary is-rounded" type="submit">
+                                Enviar
+                                <span class="icon">→</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Campos ocultos do FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="success-message" id="successMessage" style="display: none;">
+                            <div class="notification is-success">
+                                <p>Obrigado por entrar em contato, retornaremos em breve! 😊</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

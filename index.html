@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFS - Tecnologia sob medida</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="assets/images/SOFS.png" alt="SOFS" class="logo-img">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Serviços</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">Desenvolvimento Web</a>
+                            <a class="navbar-item">Sistemas</a>
+                            <a class="navbar-item">Consultoria</a>
+                        </div>
+                    </div>
+                    <a class="navbar-item">Cases</a>
+                    <a href="blog.html" class="navbar-item">Blog</a>
+                    
+                    <div class="navbar-item">
+                        <a href="contato.html" class="button is-primary is-rounded">
+                            Entre em contato
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="text-content">
+                    <h2 class="banner-title">
+                        Transformamos ideias em 
+                        <span class="highlight">soluções digitais</span> 
+                        que impactam
+                    </h2>
+                    <p class="banner-description">
+                        Combinamos estratégia e design com excelência em desenvolvimento de software para construir produtos digitais únicos de forma ágil e incremental. 
+                    </p>
+                    
+                    <div class="banner-cta">
+                        <a href="contato.html" class="button is-primary is-rounded">
+                            Comece seu projeto
+                            <span class="icon"> → </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="services-title">* SERVIÇOS</h2>
+            <h3 class="services-subtitle">Para qualquer estágio, somos um parceiro end-to-end</h3>
+
+            <!-- Botões de Serviço -->
+            <div class="columns is-centered">
+                <div class="column is-4">
+                    <div class="service-tab active" data-tab="estrategia">
+                        <h4>Estratégia<br>e Design</h4>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="service-tab" data-tab="desenvolvimento">
+                        <h4>Desenvolvimento<br>de Software</h4>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="service-tab" data-tab="arquitetura">
+                        <h4>Arquitetura<br>e Cloud</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo dos Serviços -->
+            <div class="service-contents">
+                <!-- Estratégia e Design -->
+                <div class="service-content active" id="estrategia">
+                    <div class="columns">
+                        <div class="column is-4">
+                            <div class="service-icon">⭐</div>
+                            <h3>Estratégia e Design</h3>
+                            <p>Defina e valide soluções únicas, centradas no usuário, que resultam em produtos viáveis e com alto poder de engajamento. Apoiamos desde a pesquisa até o lançamento da sua solução com nossas capacidades avançadas de design e estratégia.</p>
+                        </div>
+                        <div class="column is-8">
+                            <div class="service-items">
+                                <div class="service-item">
+                                    <h4>Concepção para Transformação Digital <span class="arrow">→</span></h4>
+                                    <p>Digitalize processos e modernize sistemas de forma estratégica, com uma visão clara de produto e um roadmap priorizado.</p>
+                                </div>
+                                <div class="service-item">
+                                    <h4>Concepção de Produtos Digitais <span class="arrow">→</span></h4>
+                                    <p>Crie e estruture produtos e negócios digitais inovadores, com estratégia para competir no mercado e atender aos seus objetivos de negócio.</p>
+                                </div>
+                                <!-- Outros itens... -->
+                            </div>
+                            <div class="contact-button">
+                                <button class="button is-light is-rounded">Entre em contato →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Desenvolvimento de Software -->
+                <div class="service-content" id="desenvolvimento">
+                    <div class="columns">
+                        <div class="column is-4">
+                            <div class="service-icon">⚡</div>
+                            <h3>Desenvolvimento de Software</h3>
+                            <p>Entregue valor aos seus clientes de forma ágil e incremental, em interação contínua com os usuários e o mercado. Desenvolva e modernize aplicativos, plataformas, sistemas e soluções de dados com squads multidisciplinares ou outsourcing.</p>
+                        </div>
+                        <div class="column is-8">
+                            <div class="service-items">
+                                <div class="service-item">
+                                    <h4>Desenvolvimento de Software <span class="arrow">→</span></h4>
+                                    <p>Crie e evolua sua aplicação web, plataforma ou sistema com foco em inovação e alinhado às estratégias do seu negócio.</p>
+                                </div>
+
+                                <div class="service-item">
+                                    <h4>Sustentação de Software <span class="arrow">→</span></h4>
+                                    <p>Garanta o suporte às aplicações de missão crítica de sua operação e mantenha seus sistemas e aplicativos funcionando e evoluindo continuamente.</p>
+                                </div>
+
+                                <div class="service-item">
+                                    <h4>Crie seu site<span class="arrow">→</span></h4>
+                                    <p>Criamos sua landing page, site institucional ou e-commerce com foco em resultados e alinhado às estratégias do seu negócio. criamos sua pagina para o seu negócio.</p>
+                                </div>
+
+                                <div class="service-item">
+                                    <h4>Outsourcing <span class="arrow">→</span></h4>
+                                    <p>Aumente seu time com eficiência e alto nível técnico. Para cada necessidade, um profissional com as skills técnicas e comportamentais certas.</p>
+                                </div>
+
+                                <div class="service-item">
+                                    <h4>Consultoria em Agilidade e Práticas de Desenvolvimento <span class="arrow">→</span></h4>
+                                    <p>Acelere a transformação de sua empresa adotando cultura e métodos ágeis. Adquira hábitos de experimentação e aprendizado rápido e coloque seu usuário no centro.</p>
+                                </div>
+                            </div>
+                            <div class="contact-button">
+                                <button class="button is-light is-rounded">Entre em contato →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Arquitetura e Cloud -->
+                <div class="service-content" id="arquitetura">
+                    <div class="columns">
+                        <div class="column is-4">
+                            <div class="service-icon">☁️</div>
+                            <h3>Arquitetura e Cloud</h3>
+                            <p>Oferecemos soluções em nuvem de alta performance, garantindo escalabilidade, segurança e disponibilidade para suas aplicações. Nossa infraestrutura 100% em cloud proporciona a melhor experiência para seu negócio.</p>
+                        </div>
+                        <div class="column is-8">
+                            <div class="service-items">
+                                <div class="service-item">
+                                    <h4>Por que Cloud? <span class="arrow">→</span></h4>
+                                    <p>Infraestrutura moderna e flexível, com recursos sob demanda, alta disponibilidade e pagamento conforme o uso. Elimine custos com hardware e manutenção física.</p>
+                                </div>
+
+                                <div class="service-item">
+                                    <h4>Cloud vs VPS <span class="arrow">→</span></h4>
+                                    <p>Enquanto VPS oferece recursos limitados e escalabilidade manual, a Cloud proporciona recursos ilimitados, escalabilidade automática e maior segurança para suas aplicações.</p>
+                                </div>
+
+                                <div class="service-item">
+                                    <h4>Nossas Soluções em Cloud <span class="arrow">→</span></h4>
+                                    <p>Todas nossas aplicações são desenvolvidas e hospedadas em ambiente cloud, garantindo:
+                                        • Alta disponibilidade
+                                        • Escalabilidade automática
+                                        • Backup automático
+                                        • Segurança avançada
+                                        • Monitoramento 24/7</p>
+                                </div>
+
+                                <div class="service-item">
+                                    <h4>Benefícios para seu Negócio <span class="arrow">→</span></h4>
+                                    <p>• Redução de custos com infraestrutura
+                                       • Maior agilidade e flexibilidade
+                                       • Acesso de qualquer lugar
+                                       • Disaster Recovery
+                                       • Suporte especializado</p>
+                                </div>
+                            </div>
+                            <div class="contact-button">
+                                <button class="button is-light is-rounded">Entre em contato →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Por que escolher a SOFS -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h4 class="subtitle">JEITO SOFS</h4>
+                <h2 class="title">Por que escolher a SOFS</h2>
+            </div>
+
+            <!-- Card de Apresentação -->
+            <div class="company-card">
+                <div class="columns is-vcentered">
+                    <div class="column is-7">
+                        <div class="company-intro">
+                            <h3>Inovação e eficiência em cada solução digital</h3>
+                            <p>nossa missão é transformar desafios em oportunidades, criando soluções digitais personalizadas que realmente fazem a diferença. Somos uma equipe comprometida em oferecer:</p>
+                            
+                            <div class="highlights">
+                                <div class="highlight-item">
+                                    <span class="icon">✓</span>
+                                    <span>Abordagem colaborativa, garantindo que cada solução seja ajustada às necessidades reais de cada cliente</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="icon">✓</span>
+                                    <span> Entrega rápida e transparente, usando metodologias ágeis para otimizar cada projeto</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="icon">✓</span>
+                                    <span>Time altamente qualificado e dedicado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                
+                                <span class="stat-label">Projetos personalizados que maximizam o impacto de cada investimento</span>
+                            </div>
+                            <div class="stat-box">
+                                
+                                <span class="stat-label">Suporte contínuo e transparente, para garantir a adaptação às mudanças do mercado</span>
+                            </div>
+                            <div class="stat-box">
+                                
+                                <span class="stat-label">Clientes satisfeitos com soluções de alto valo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards de Diferenciais -->
+            <div class="columns is-multiline mt-6">
+                <div class="column is-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Conhecimento aplicado</h3>
+                        <p>Reunimos as melhores práticas de mercado para conduzir nossos clientes em um processo <span class="highlight">end-to-end</span> constantemente validado e aprimorado.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Impacto de negócio</h3>
+                        <p>Mergulhamos no negócio de nossos clientes para cocriar estratégias focadas em <span class="highlight">impacto</span>.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Inovação efetiva</h3>
+                        <p>Criamos insights, validamos ideias e desenvolvemos software de forma <span class="highlight">incremental</span>, em interação contínua com os usuários e com o mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-5">
+                    <h4 class="subtitle">CONTATO</h4>
+                    <h2 class="title">Vamos conversar sobre seus projetos?</h2>
+                    <p class="description">
+                        Quer saber mais sobre como trabalhamos, conversar sobre seus 
+                        desafios ou tirar dúvidas? Fale com a gente. Adoramos trocar ideias 
+                        sobre produtos digitais!
+                    </p>
+                    <p class="sub-description">
+                        Entre em contato e conheça o jeito sofs de desenvolver software.
+                    </p>
+                </div>
+                <div class="column is-7">
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/wendellc.dev@gmail.com" method="POST">
+                        <div class="columns is-multiline">
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Nome Completo*</label>
+                                    <div class="control">
+                                        <input class="input" type="text" name="nome" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Cargo*</label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select name="cargo" required>
+                                                <option value="">Selecione</option>
+                                                <option value="CEO">CEO</option>
+                                                <option value="Gerente">Gerente</option>
+                                                <option value="Analista">Analista</option>
+                                                <option value="Outro">Outro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Nome da empresa*</label>
+                                    <div class="control">
+                                        <input class="input" type="text" name="empresa" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Mercado*</label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select name="mercado" required>
+                                                <option value="">Selecione</option>
+                                                <option value="Tecnologia">Tecnologia</option>
+                                                <option value="Finanças">Finanças</option>
+                                                <option value="Saúde">Saúde</option>
+                                                <option value="Educação">Educação</option>
+                                                <option value="Outro">Outro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">E-mail*</label>
+                                    <div class="control">
+                                        <input class="input" type="email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field">
+                                    <label class="label">Telefone*</label>
+                                    <div class="control">
+                                        <input class="input" type="tel" name="telefone" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <div class="field">
+                                    <label class="label">Fale sobre seu projeto ou desafio</label>
+                                    <div class="control">
+                                        <textarea class="textarea" name="mensagem" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <div class="field">
+                                    <label class="checkbox">
+                                        <input type="checkbox" required>
+                                        Eu concordo com a <a href="#">Política de Privacidade</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button class="button is-primary is-rounded" type="submit">
+                                Enviar
+                                <span class="icon">→</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Campos ocultos do FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="success-message" id="successMessage" style="display: none;">
+                            <div class="notification is-success">
+                                <p>Obrigado por entrar em contato, retornaremos em breve! 😊</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                alert('Obrigado por entrar em contato, retornaremos em breve!');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html> 
