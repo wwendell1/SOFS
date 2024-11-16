@@ -77,3 +77,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Funcionalidade do Modal de Privacidade
+document.addEventListener('DOMContentLoaded', () => {
+    const privacyLink = document.querySelector('a[href="#"]');
+    const modal = document.getElementById('privacyModal');
+    const closeButtons = modal.querySelectorAll('.delete, .modal-close-button, .modal-background');
+    
+    // Abre o modal
+    privacyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('is-active');
+    });
+    
+    // Fecha o modal
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            modal.classList.remove('is-active');
+        });
+    });
+    
+    // Fecha o modal com a tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+            modal.classList.remove('is-active');
+        }
+    });
+});

@@ -1572,3 +1572,29 @@ a:hover {
         padding: 0.75rem;
     }
 }
+
+
+
+/**/
+
+/* Estilos do Modal de Privacidade */
+.modal-card {
+    max-width: 700px;
+    width: 90%;
+}
+
+.modal-card-body {
+    padding: 2rem;
+}
+
+.modal-card-body p {
+    line-height: 1.6;
+}
+
+.modal-card-body ul {
+    margin-left: 1.5rem;
+}
+
+.modal-card-foot {
+    justify-content: flex-end;
+}
