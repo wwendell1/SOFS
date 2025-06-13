@@ -11,11 +11,12 @@
 </head>
 <body>
     <!-- Navbar -->
+    
     <nav class="navbar is-fixed-top">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <img src="assets/images/SOFS1.png" alt="SOFS" class="logo-img">
+                    <img src="assets/images/SOFS1.png" alt="SOFS" class="logo-img" href="index.html">
                 </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
@@ -25,10 +26,25 @@
             </div>
 
             <div class="navbar-menu">
+                <a href="index.html" class="navbar-item">Inicio</a>
                 <div class="navbar-end">
-                    <a href="index.html" class="navbar-item">Início</a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Serviços</a>
+                        <div class="navbar-dropdown">
+                            <a href="desenvolvimentoweb.html" class="navbar-item">Desenvolvimento Web</a>
+                            <a class="navbar-item">Sistemas</a>
+                            <a class="navbar-item">Consultoria</a>
+                        </div>
+                    </div>
+                    <a class="navbar-item">Cases</a>
                     <a href="blog.html" class="navbar-item">Blog</a>
-                    <a href="contato.html" class="navbar-item">Contato</a>
+                    
+                    <div class="navbar-item">
+                        <a href="contato.html" class="button is-primary is-rounded">
+                            Entre em contato
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
