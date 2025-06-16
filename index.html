@@ -17,7 +17,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
-                    <img src="assets/images/SOFS1.png" alt="SOFS" class="logo-img" href="index.html">
+                    <img src="assets/images/SOFS1.png" alt="SOFS" class="logo-img">
                 </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
                     <span aria-hidden="true"></span>
@@ -29,7 +29,7 @@
             <div id="navMenu" class="navbar-menu">
                 <a href="index.html" class="navbar-item">Início</a>
                 <div class="navbar-end">
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown">
                         <a class="navbar-link">Serviços</a>
                         <div class="navbar-dropdown">
                             <a href="desenvolvimentoweb.html" class="navbar-item">Desenvolvimento Web</a>
@@ -481,6 +481,7 @@
     <script src="assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Toggle - comum 
             const burgers = Array.from(document.querySelectorAll('.navbar-burger'));
             burgers.forEach(el => {
                 el.addEventListener('click', () => {
@@ -488,6 +489,16 @@
                     const menu = document.getElementById(target);
                     el.classList.toggle('is-active');
                     menu.classList.toggle('is-active');
+                });
+            });
+
+            // Toggle down
+            const dropdowns = document.querySelectorAll('.navbar-item.has-dropdown');
+            dropdowns.forEach(drop => {
+                const trigger = drop.querySelector('.navbar-link');
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    drop.classList.toggle('is-active');
                 });
             });
         });
