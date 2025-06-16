@@ -114,3 +114,5 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-placeholder').innerHTML = data;
         });
 });
+fetch('components/navbar.html')
+
