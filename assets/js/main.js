@@ -115,4 +115,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 fetch('components/navbar.html')
+async function loadNavbar() {
+  try {
+    const response = await fetch('components/navbar.html');
+    const data = await response.text();
+    document.getElementById('navbar-placeholder').innerHTML = data;
+
+    // Agora inicializa os eventos da navbar
+    initNavbar();
+  } catch (error) {
+    console.error('Erro ao carregar navbar:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadNavbar);
+
+
+// Bloqueia clique direito XD
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Bloqueia Ctrl+U, F12, Ctrl+Shift+I
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+    e.preventDefault();
+  }
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+    e.preventDefault();
+  }
+});
 
