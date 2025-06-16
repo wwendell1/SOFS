@@ -479,29 +479,6 @@
 
     <div id="footer-placeholder"></div>
     <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Toggle - comum 
-            const burgers = Array.from(document.querySelectorAll('.navbar-burger'));
-            burgers.forEach(el => {
-                el.addEventListener('click', () => {
-                    const target = el.dataset.target;
-                    const menu = document.getElementById(target);
-                    el.classList.toggle('is-active');
-                    menu.classList.toggle('is-active');
-                });
-            });
-
-            // Toggle down
-            const dropdowns = document.querySelectorAll('.navbar-item.has-dropdown');
-            dropdowns.forEach(drop => {
-                const trigger = drop.querySelector('.navbar-link');
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    drop.classList.toggle('is-active');
-                });
-            });
-        });
-    </script>
+    
 </body>
 </html> 
