@@ -448,14 +448,7 @@
 
     <div id="footer-placeholder"></div>
     <script src="assets/js/main.js"></script>
-    <script>
-      fetch('navbar.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('navbar-placeholder').innerHTML = html;
-        })
-        .catch(err => console.error('Erro ao carregar navbar:', err));
-    </script>
+    <script src="assets/js/navbar.js"></script>
     
 </body>
 </html> 
